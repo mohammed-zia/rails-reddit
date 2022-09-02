@@ -3,7 +3,16 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    # render status: 404
+    # @users = User.all
+    # render status: 404
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.xml { render :xml => @users }
+    #   format.json { render :json => @users }
+    # end
+
+    head :not_found
   end
 
   # GET /users/1 or /users/1.json
